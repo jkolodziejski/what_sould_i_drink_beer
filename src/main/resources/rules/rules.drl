@@ -1,0 +1,456 @@
+package com.sample
+import javax.swing.JOptionPane
+import javax.swing.JFrame
+import org.kie.api.runtime.KieRuntime
+import javax.swing.JRadioButton
+import javax.swing.JPanel
+global JFrame frame
+global javax.swing.JTextArea textArea
+import java.util.ArrayList
+import java.util.List
+import java.util.Arrays;
+import java.util.ArrayList
+import javax.swing.JLabel;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import com.sample.Main.Answer;
+rule "Are you in Scotland?"
+    when
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you in Scotland?");
+    insert (answer);
+end
+
+rule "Are you in Scotland? - Yes - Brew Dog"
+    when
+    Answer(question == "Are you in Scotland?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Brew Dog");
+end
+
+
+rule "Are you in Scotland? - No - Do you sleep in a double"
+    when
+    Answer(question == "Are you in Scotland?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Do you sleep in a double-wide?");
+    insert (answer);
+end
+
+rule "Do you sleep in a double-wide? - Yes - Country Club"
+    when
+    Answer(question == "Do you sleep in a double-wide?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Country Club");
+end
+
+
+rule "Do you sleep in a double-wide? - No - Are you Bob or Doug McKenzie?"
+    when
+    Answer(question == "Do you sleep in a double-wide?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you Bob or Doug McKenzie?");
+    insert (answer);
+end
+
+rule "Are you Bob or Doug McKenzie? - Yes - Elsinore"
+    when
+    Answer(question == "Are you Bob or Doug McKenzie?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Elsinore");
+end
+
+
+rule "Are you Bob or Doug McKenzie? - No - Do you live in the projects?"
+    when
+    Answer(question == "Are you Bob or Doug McKenzie?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Do you live in the projects?");
+    insert (answer);
+end
+
+rule "Do you live in the projects? - Yes - Colt 45 and Steel Reserve"
+    when
+    Answer(question == "Do you live in the projects?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Colt 45 and Steel Reserve");
+end
+
+
+rule "Do you live in the projects? - No - Are you a hockey fan eh?"
+    when
+    Answer(question == "Do you live in the projects?" && answer == "No")
+    then 
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you a hockey fan eh?");
+    insert (answer);
+end
+
+rule "Are you a hockey fan eh? - Yes - Molson and Blue"
+    when
+    Answer(question == "Are you a hockey fan eh?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Molson and Blue");
+end
+
+
+rule "Are you a hockey fan eh? - No - Do you know how to access the Stargate?"
+    when
+    Answer(question == "Are you a hockey fan eh?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Do you know how to access the Stargate?");
+    insert (answer);
+end
+
+rule "Do you know how to access the Stargate? - Yes - Rheingold and  Esslingeis"
+    when
+    Answer(question == "Do you know how to access the Stargate?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Rheingold and  Esslingeis");
+end
+
+
+rule "Do you know how to access the Stargate? - No - Are you doing that \"ironic\" hipster thing?"
+    when
+    Answer(question == "Do you know how to access the Stargate?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you doing that \"ironic\" hipster thing?");
+    insert (answer);
+end
+
+rule "Are you doing that \"ironic\" hipster thing? - Yes - Blue Ribbon"
+    when
+    Answer(question == "Are you doing that \"ironic\" hipster thing?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Blue Ribbon");
+end
+
+
+rule "Are you doing that \"ironic\" hipster thing? - No - Are you the designated driver?"
+    when
+    Answer(question == "Are you doing that \"ironic\" hipster thing?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you the designated driver?");
+    insert (answer);
+end
+
+rule "Are you the designated driver? - Yes - Odoul's"
+    when
+    Answer(question == "Are you the designated driver?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Odoul's");
+end
+
+
+rule "Are you the designated driver? - No - Are you at a tailgate or frat party?"
+    when
+    Answer(question == "Are you the designated driver?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you at a tailgate or frat party?");
+    insert (answer);
+end
+
+rule "Are you at a tailgate or frat party? - Yes - Is your wife nagging you about the beer gut?"
+    when
+    Answer(question == "Are you at a tailgate or frat party?" && answer == "Yes")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Is your wife nagging you about the beer gut?");
+    insert (answer);
+end
+
+rule "Is your wife nagging you about the beer gut? - Yes - Amstel light , Miller lite, Coors light, Bud light"
+    when
+    Answer(question == "Is your wife nagging you about the beer gut?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Amstel light , Miller lite, Coors light, Bud light");
+end
+
+
+rule "Is your wife nagging you about the beer gut? - No - Amstel , Miller , Coors, Budweiser"
+    when
+    Answer(question == "Is your wife nagging you about the beer gut?" && answer == "No")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Amstel , Miller , Coors, Budweiser");
+end
+
+
+rule "Are you at a tailgate or frat party? - No - Is Guinness on tap?"
+    when
+    Answer(question == "Are you at a tailgate or frat party?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Is Guinness on tap?");
+    insert (answer);
+end
+
+rule "Is Guinness on tap? - Yes - Guinness"
+    when
+    Answer(question == "Is Guinness on tap?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Guinness");
+end
+
+
+rule "Is Guinness on tap? - No - Is it summer?"
+    when
+    Answer(question == "Is Guinness on tap?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Is it summer?");
+    insert (answer);
+end
+
+rule "Is it summer? - Yes - Are you paying in change?"
+    when
+    Answer(question == "Is it summer?" && answer == "Yes")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you paying in change?");
+    insert (answer);
+end
+
+rule "Are you paying in change? - Yes - Tequiza and Modelo especial"
+    when
+    Answer(question == "Are you paying in change?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Tequiza and Modelo especial");
+end
+
+
+rule "Are you paying in change? - No - Corona Extra"
+    when
+    Answer(question == "Are you paying in change?" && answer == "No")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Corona Extra");
+end
+
+
+rule "Is it summer? - No - Can you speak fluent French, in Russian?"
+    when
+    Answer(question == "Is it summer?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Can you speak fluent French, in Russian?");
+    insert (answer);
+end
+
+rule "Can you speak fluent French, in Russian? - Yes - Dos equis"
+    when
+    Answer(question == "Can you speak fluent French, in Russian?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Dos equis");
+end
+
+
+rule "Can you speak fluent French, in Russian? - No - Are you having a dinner party?"
+    when
+    Answer(question == "Can you speak fluent French, in Russian?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you having a dinner party?");
+    insert (answer);
+end
+
+rule "Are you having a dinner party? - Yes - Blue Moon, Samuel Adams, New Belgium and Gordon Biersch"
+    when
+    Answer(question == "Are you having a dinner party?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Blue Moon, Samuel Adams, New Belgium and Gordon Biersch");
+end
+
+
+rule "Are you having a dinner party? - No - Did you just graduate college?"
+    when
+    Answer(question == "Are you having a dinner party?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Did you just graduate college?");
+    insert (answer);
+end
+
+rule "Did you just graduate college? - Yes - ...but did you move back with your parents?"
+    when
+    Answer(question == "Did you just graduate college?" && answer == "Yes")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "...but did you move back with your parents?");
+    insert (answer);
+end
+
+rule "...but did you move back with your parents? - Yes - Mickeys, Old Milwaukee and Olde English \"800\" "
+    when
+    Answer(question == "...but did you move back with your parents?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Mickeys, Old Milwaukee and Olde English \"800\"");
+end
+
+
+rule "...but did you move back with your parents? - No - Heineken, Beck's and Rolling Rock"
+    when
+    Answer(question == "...but did you move back with your parents?" && answer == "No")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Heineken, Beck's and Rolling Rock");
+end
+
+
+rule "Did you just graduate college? - No - Are you  a Parrothead?"
+    when
+    Answer(question == "Did you just graduate college?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you  a Parrothead?");
+    insert (answer);
+end
+
+rule "Are you  a Parrothead? - Yes - LandShark"
+    when
+    Answer(question == "Are you  a Parrothead?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "LandShark");
+end
+
+
+rule "Are you  a Parrothead? - No - Are you trying to seem \"worldly\"?"
+    when
+    Answer(question == "Are you  a Parrothead?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you trying to seem \"worldly\"?");
+    insert (answer);
+end
+
+rule "Are you trying to seem \"worldly\"? - Yes - Foster's, Red Stripe and Calsberg"
+    when
+    Answer(question == "Are you trying to seem \"worldly\"?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Foster's, Red Stripe and Calsberg");
+end
+
+
+rule "Are you trying to seem \"worldly\"? - No - Did you bring in a reusable grocery bag?"
+    when
+    Answer(question == "Are you trying to seem \"worldly\"?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Did you bring in a reusable grocery bag?");
+    insert (answer);
+end
+
+rule "Did you bring in a reusable grocery bag? - Yes - Red hook, Sierra Nevada, Harp Lager, Newcastle Brown Ale and Stella Artois"
+    when
+    Answer(question == "Did you bring in a reusable grocery bag?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Red hook, Sierra Nevada, Harp Lager, Newcastle Brown Ale and Stella Artois");
+end
+
+
+rule "Did you bring in a reusable grocery bag? - No - Are you drunk?"
+    when
+    Answer(question == "Did you bring in a reusable grocery bag?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Are you drunk?");
+    insert (answer);
+end
+
+rule "Are you drunk? - Yes - Tecate, Moosehead"
+    when
+    Answer(question == "Are you drunk?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Tecate, Moosehead");
+end
+
+
+rule "Are you drunk? - No - Do you truly love beer?"
+    when
+    Answer(question == "Are you drunk?" && answer == "No")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "Do you truly love beer?");
+    insert (answer);
+end
+
+rule "Do you truly love beer? - Yes - ... $500 love?"
+    when
+    Answer(question == "Do you truly love beer?" && answer == "Yes")
+    then
+    Answer answer = state_question(frame, kcontext.getKieRuntime(), "... $500 love?");
+    insert (answer);
+end
+
+rule "... $500 love? - Yes - Utopias"
+    when
+    Answer(question == "... $500 love?" && answer == "Yes")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Utopias");
+end
+
+
+rule "... $500 love? - No - Alskan Amber, Ale Asylum , Dogfish Head Craft Brewed Ales, Double Diamond, Cantillon, Stone Brewing Co., Full Sail, Hair Dog, Clipper City Brewing Co."
+    when
+    Answer(question == "... $500 love?" && answer == "No")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Alskan Amber, Ale Asylum , Dogfish Head Craft Brewed Ales, Double Diamond, Cantillon, Stone Brewing Co., Full Sail, Hair Dog, Clipper City Brewing Co.");
+end
+
+
+rule "Do you truly love beer? - No - Michelob ultra, Bass"
+    when
+    Answer(question == "Do you truly love beer?" && answer == "No")
+    then
+    show_final(frame, kcontext.getKieRuntime(), "Michelob ultra, Bass");
+end
+
+function void show_final(JFrame frame, KieRuntime krt, String beer) {
+    final JPanel panel = new JPanel();
+    String text = beer;
+    panel.add(new JLabel(text));
+    JOptionPane.showMessageDialog(frame, panel);
+}
+
+
+
+function Answer state_question(JFrame frame, KieRuntime krt, String question_Str) {
+	
+	ArrayList<String> answers = new ArrayList<>();
+    answers.add("Yes");
+    answers.add("No");
+    
+    
+	
+
+    class GUI_state implements ItemListener {
+        private Answer answer;
+        private String chosen;
+        public GUI_state(Answer answer, String chosen) {
+            this.answer = answer;
+            this.chosen = chosen;
+        }
+
+        @Override
+        public void itemStateChanged(ItemEvent event) {
+            if (event.getStateChange() == ItemEvent.SELECTED) {
+                answer.setAnswer(chosen);
+            }
+        }
+    }
+    Answer answer = new Answer(question_Str, (String) answers.get(0));
+
+    final JPanel panel = new JPanel(new GridLayout(0, 1));
+    panel.add(new JLabel(question_Str));
+
+    ArrayList < JRadioButton > button_list = new ArrayList < > ();
+
+    for (int i = 0; i < answers.size(); i++) {
+        String text = (String) answers.get(i);
+        JRadioButton new_button = new JRadioButton(text);
+        GUI_state new_listener = new GUI_state(answer, text);
+        new_button.addItemListener(new_listener);
+       button_list.add(new_button);
+    }
+
+    button_list.get(0).setSelected(true);
+    answer.setAnswer((String) answers.get(0));
+
+    ButtonGroup group = new ButtonGroup();
+    for (int i = 0; i < button_list.size(); i++) {
+        group.add(button_list.get(i));
+        panel.add(button_list.get(i));
+    }
+    Object[] options = {
+        "Proceed"
+    };
+    if (JOptionPane.showConfirmDialog(frame, panel, "Question", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE) < 0) {
+        answer.setAnswer("Zakoncz program");
+    }
+
+    return answer;
+}

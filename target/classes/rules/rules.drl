@@ -22,7 +22,7 @@ rule "Are you in Scotland?"
     insert (answer);
 end
 
-rule "Are you in Scotland? - Yes - Brew Dog"
+rule "Are you in Scotland? - Yes"
     when
     Answer(question == "Are you in Scotland?" && answer == "Yes")
     then
@@ -30,7 +30,7 @@ rule "Are you in Scotland? - Yes - Brew Dog"
 end
 
 
-rule "Are you in Scotland? - No - Do you sleep in a double"
+rule "Are you in Scotland? - No"
     when
     Answer(question == "Are you in Scotland?" && answer == "No")
     then
@@ -38,7 +38,7 @@ rule "Are you in Scotland? - No - Do you sleep in a double"
     insert (answer);
 end
 
-rule "Do you sleep in a double-wide? - Yes - Country Club"
+rule "Do you sleep in a double-wide? - Yes"
     when
     Answer(question == "Do you sleep in a double-wide?" && answer == "Yes")
     then
@@ -46,7 +46,7 @@ rule "Do you sleep in a double-wide? - Yes - Country Club"
 end
 
 
-rule "Do you sleep in a double-wide? - No - Are you Bob or Doug McKenzie?"
+rule "Do you sleep in a double-wide? - No"
     when
     Answer(question == "Do you sleep in a double-wide?" && answer == "No")
     then
@@ -54,7 +54,7 @@ rule "Do you sleep in a double-wide? - No - Are you Bob or Doug McKenzie?"
     insert (answer);
 end
 
-rule "Are you Bob or Doug McKenzie? - Yes - Elsinore"
+rule "Are you Bob or Doug McKenzie? - Yes"
     when
     Answer(question == "Are you Bob or Doug McKenzie?" && answer == "Yes")
     then
@@ -62,7 +62,7 @@ rule "Are you Bob or Doug McKenzie? - Yes - Elsinore"
 end
 
 
-rule "Are you Bob or Doug McKenzie? - No - Do you live in the projects?"
+rule "Are you Bob or Doug McKenzie? - No"
     when
     Answer(question == "Are you Bob or Doug McKenzie?" && answer == "No")
     then
@@ -78,7 +78,7 @@ rule "Do you live in the projects? - Yes - Colt 45 and Steel Reserve"
 end
 
 
-rule "Do you live in the projects? - No - Are you a hockey fan eh?"
+rule "Do you live in the projects? - No"
     when
     Answer(question == "Do you live in the projects?" && answer == "No")
     then 
@@ -86,7 +86,7 @@ rule "Do you live in the projects? - No - Are you a hockey fan eh?"
     insert (answer);
 end
 
-rule "Are you a hockey fan eh? - Yes - Molson and Blue"
+rule "Are you a hockey fan eh? - Yes"
     when
     Answer(question == "Are you a hockey fan eh?" && answer == "Yes")
     then
@@ -94,7 +94,7 @@ rule "Are you a hockey fan eh? - Yes - Molson and Blue"
 end
 
 
-rule "Are you a hockey fan eh? - No - Do you know how to access the Stargate?"
+rule "Are you a hockey fan eh? - No"
     when
     Answer(question == "Are you a hockey fan eh?" && answer == "No")
     then
@@ -102,7 +102,7 @@ rule "Are you a hockey fan eh? - No - Do you know how to access the Stargate?"
     insert (answer);
 end
 
-rule "Do you know how to access the Stargate? - Yes - Rheingold and  Esslingeis"
+rule "Do you know how to access the Stargate? - Yes"
     when
     Answer(question == "Do you know how to access the Stargate?" && answer == "Yes")
     then
@@ -110,7 +110,7 @@ rule "Do you know how to access the Stargate? - Yes - Rheingold and  Esslingeis"
 end
 
 
-rule "Do you know how to access the Stargate? - No - Are you doing that \"ironic\" hipster thing?"
+rule "Do you know how to access the Stargate? - No"
     when
     Answer(question == "Do you know how to access the Stargate?" && answer == "No")
     then
@@ -118,7 +118,7 @@ rule "Do you know how to access the Stargate? - No - Are you doing that \"ironic
     insert (answer);
 end
 
-rule "Are you doing that \"ironic\" hipster thing? - Yes - Blue Ribbon"
+rule "Are you doing that \"ironic\" hipster thing? - Yes"
     when
     Answer(question == "Are you doing that \"ironic\" hipster thing?" && answer == "Yes")
     then
@@ -126,7 +126,7 @@ rule "Are you doing that \"ironic\" hipster thing? - Yes - Blue Ribbon"
 end
 
 
-rule "Are you doing that \"ironic\" hipster thing? - No - Are you the designated driver?"
+rule "Are you doing that \"ironic\" hipster thing? - No"
     when
     Answer(question == "Are you doing that \"ironic\" hipster thing?" && answer == "No")
     then
@@ -134,7 +134,7 @@ rule "Are you doing that \"ironic\" hipster thing? - No - Are you the designated
     insert (answer);
 end
 
-rule "Are you the designated driver? - Yes - Odoul's"
+rule "Are you the designated driver? - Yes"
     when
     Answer(question == "Are you the designated driver?" && answer == "Yes")
     then
@@ -142,7 +142,7 @@ rule "Are you the designated driver? - Yes - Odoul's"
 end
 
 
-rule "Are you the designated driver? - No - Are you at a tailgate or frat party?"
+rule "Are you the designated driver? - No"
     when
     Answer(question == "Are you the designated driver?" && answer == "No")
     then
@@ -150,7 +150,7 @@ rule "Are you the designated driver? - No - Are you at a tailgate or frat party?
     insert (answer);
 end
 
-rule "Are you at a tailgate or frat party? - Yes - Is your wife nagging you about the beer gut?"
+rule "Are you at a tailgate or frat party? - Yes"
     when
     Answer(question == "Are you at a tailgate or frat party?" && answer == "Yes")
     then
@@ -158,7 +158,7 @@ rule "Are you at a tailgate or frat party? - Yes - Is your wife nagging you abou
     insert (answer);
 end
 
-rule "Is your wife nagging you about the beer gut? - Yes - Amstel light , Miller lite, Coors light, Bud light"
+rule "Is your wife nagging you about the beer gut? - Yes"
     when
     Answer(question == "Is your wife nagging you about the beer gut?" && answer == "Yes")
     then
@@ -166,7 +166,7 @@ rule "Is your wife nagging you about the beer gut? - Yes - Amstel light , Miller
 end
 
 
-rule "Is your wife nagging you about the beer gut? - No - Amstel , Miller , Coors, Budweiser"
+rule "Is your wife nagging you about the beer gut? - No"
     when
     Answer(question == "Is your wife nagging you about the beer gut?" && answer == "No")
     then
@@ -174,7 +174,7 @@ rule "Is your wife nagging you about the beer gut? - No - Amstel , Miller , Coor
 end
 
 
-rule "Are you at a tailgate or frat party? - No - Is Guinness on tap?"
+rule "Are you at a tailgate or frat party? - No"
     when
     Answer(question == "Are you at a tailgate or frat party?" && answer == "No")
     then
@@ -182,7 +182,7 @@ rule "Are you at a tailgate or frat party? - No - Is Guinness on tap?"
     insert (answer);
 end
 
-rule "Is Guinness on tap? - Yes - Guinness"
+rule "Is Guinness on tap? - Yes"
     when
     Answer(question == "Is Guinness on tap?" && answer == "Yes")
     then
@@ -190,7 +190,7 @@ rule "Is Guinness on tap? - Yes - Guinness"
 end
 
 
-rule "Is Guinness on tap? - No - Is it summer?"
+rule "Is Guinness on tap? - No"
     when
     Answer(question == "Is Guinness on tap?" && answer == "No")
     then
@@ -198,7 +198,7 @@ rule "Is Guinness on tap? - No - Is it summer?"
     insert (answer);
 end
 
-rule "Is it summer? - Yes - Are you paying in change?"
+rule "Is it summer? - Yes"
     when
     Answer(question == "Is it summer?" && answer == "Yes")
     then
@@ -206,7 +206,7 @@ rule "Is it summer? - Yes - Are you paying in change?"
     insert (answer);
 end
 
-rule "Are you paying in change? - Yes - Tequiza and Modelo especial"
+rule "Are you paying in change? - Yes"
     when
     Answer(question == "Are you paying in change?" && answer == "Yes")
     then
@@ -214,7 +214,7 @@ rule "Are you paying in change? - Yes - Tequiza and Modelo especial"
 end
 
 
-rule "Are you paying in change? - No - Corona Extra"
+rule "Are you paying in change? - No"
     when
     Answer(question == "Are you paying in change?" && answer == "No")
     then
@@ -222,7 +222,7 @@ rule "Are you paying in change? - No - Corona Extra"
 end
 
 
-rule "Is it summer? - No - Can you speak fluent French, in Russian?"
+rule "Is it summer? - No"
     when
     Answer(question == "Is it summer?" && answer == "No")
     then
@@ -230,7 +230,7 @@ rule "Is it summer? - No - Can you speak fluent French, in Russian?"
     insert (answer);
 end
 
-rule "Can you speak fluent French, in Russian? - Yes - Dos equis"
+rule "Can you speak fluent French, in Russian? - Yes"
     when
     Answer(question == "Can you speak fluent French, in Russian?" && answer == "Yes")
     then
@@ -238,7 +238,7 @@ rule "Can you speak fluent French, in Russian? - Yes - Dos equis"
 end
 
 
-rule "Can you speak fluent French, in Russian? - No - Are you having a dinner party?"
+rule "Can you speak fluent French, in Russian? - No"
     when
     Answer(question == "Can you speak fluent French, in Russian?" && answer == "No")
     then
@@ -246,7 +246,7 @@ rule "Can you speak fluent French, in Russian? - No - Are you having a dinner pa
     insert (answer);
 end
 
-rule "Are you having a dinner party? - Yes - Blue Moon, Samuel Adams, New Belgium and Gordon Biersch"
+rule "Are you having a dinner party? - Yes"
     when
     Answer(question == "Are you having a dinner party?" && answer == "Yes")
     then
@@ -254,7 +254,7 @@ rule "Are you having a dinner party? - Yes - Blue Moon, Samuel Adams, New Belgiu
 end
 
 
-rule "Are you having a dinner party? - No - Did you just graduate college?"
+rule "Are you having a dinner party? - No"
     when
     Answer(question == "Are you having a dinner party?" && answer == "No")
     then
@@ -262,7 +262,7 @@ rule "Are you having a dinner party? - No - Did you just graduate college?"
     insert (answer);
 end
 
-rule "Did you just graduate college? - Yes - ...but did you move back with your parents?"
+rule "Did you just graduate college? - Yes"
     when
     Answer(question == "Did you just graduate college?" && answer == "Yes")
     then
@@ -270,7 +270,7 @@ rule "Did you just graduate college? - Yes - ...but did you move back with your 
     insert (answer);
 end
 
-rule "...but did you move back with your parents? - Yes - Mickeys, Old Milwaukee and Olde English \"800\" "
+rule "...but did you move back with your parents? - Yes"
     when
     Answer(question == "...but did you move back with your parents?" && answer == "Yes")
     then
@@ -278,7 +278,7 @@ rule "...but did you move back with your parents? - Yes - Mickeys, Old Milwaukee
 end
 
 
-rule "...but did you move back with your parents? - No - Heineken, Beck's and Rolling Rock"
+rule "...but did you move back with your parents? - No"
     when
     Answer(question == "...but did you move back with your parents?" && answer == "No")
     then
@@ -286,7 +286,7 @@ rule "...but did you move back with your parents? - No - Heineken, Beck's and Ro
 end
 
 
-rule "Did you just graduate college? - No - Are you  a Parrothead?"
+rule "Did you just graduate college? - No"
     when
     Answer(question == "Did you just graduate college?" && answer == "No")
     then
@@ -294,7 +294,7 @@ rule "Did you just graduate college? - No - Are you  a Parrothead?"
     insert (answer);
 end
 
-rule "Are you  a Parrothead? - Yes - LandShark"
+rule "Are you  a Parrothead? - Yes"
     when
     Answer(question == "Are you  a Parrothead?" && answer == "Yes")
     then
@@ -302,7 +302,7 @@ rule "Are you  a Parrothead? - Yes - LandShark"
 end
 
 
-rule "Are you  a Parrothead? - No - Are you trying to seem \"worldly\"?"
+rule "Are you  a Parrothead? - No"
     when
     Answer(question == "Are you  a Parrothead?" && answer == "No")
     then
@@ -310,7 +310,7 @@ rule "Are you  a Parrothead? - No - Are you trying to seem \"worldly\"?"
     insert (answer);
 end
 
-rule "Are you trying to seem \"worldly\"? - Yes - Foster's, Red Stripe and Calsberg"
+rule "Are you trying to seem \"worldly\"? - Yes"
     when
     Answer(question == "Are you trying to seem \"worldly\"?" && answer == "Yes")
     then
@@ -318,7 +318,7 @@ rule "Are you trying to seem \"worldly\"? - Yes - Foster's, Red Stripe and Calsb
 end
 
 
-rule "Are you trying to seem \"worldly\"? - No - Did you bring in a reusable grocery bag?"
+rule "Are you trying to seem \"worldly\"? - No"
     when
     Answer(question == "Are you trying to seem \"worldly\"?" && answer == "No")
     then
@@ -326,7 +326,7 @@ rule "Are you trying to seem \"worldly\"? - No - Did you bring in a reusable gro
     insert (answer);
 end
 
-rule "Did you bring in a reusable grocery bag? - Yes - Red hook, Sierra Nevada, Harp Lager, Newcastle Brown Ale and Stella Artois"
+rule "Did you bring in a reusable grocery bag? - Yes"
     when
     Answer(question == "Did you bring in a reusable grocery bag?" && answer == "Yes")
     then
@@ -334,7 +334,7 @@ rule "Did you bring in a reusable grocery bag? - Yes - Red hook, Sierra Nevada, 
 end
 
 
-rule "Did you bring in a reusable grocery bag? - No - Are you drunk?"
+rule "Did you bring in a reusable grocery bag? - No"
     when
     Answer(question == "Did you bring in a reusable grocery bag?" && answer == "No")
     then
@@ -342,7 +342,7 @@ rule "Did you bring in a reusable grocery bag? - No - Are you drunk?"
     insert (answer);
 end
 
-rule "Are you drunk? - Yes - Tecate, Moosehead"
+rule "Are you drunk? - Yes"
     when
     Answer(question == "Are you drunk?" && answer == "Yes")
     then
@@ -350,7 +350,7 @@ rule "Are you drunk? - Yes - Tecate, Moosehead"
 end
 
 
-rule "Are you drunk? - No - Do you truly love beer?"
+rule "Are you drunk? - No"
     when
     Answer(question == "Are you drunk?" && answer == "No")
     then
@@ -358,7 +358,7 @@ rule "Are you drunk? - No - Do you truly love beer?"
     insert (answer);
 end
 
-rule "Do you truly love beer? - Yes - ... $500 love?"
+rule "Do you truly love beer? - Yes "
     when
     Answer(question == "Do you truly love beer?" && answer == "Yes")
     then
@@ -366,7 +366,7 @@ rule "Do you truly love beer? - Yes - ... $500 love?"
     insert (answer);
 end
 
-rule "... $500 love? - Yes - Utopias"
+rule "... $500 love? - Yes "
     when
     Answer(question == "... $500 love?" && answer == "Yes")
     then
@@ -374,7 +374,7 @@ rule "... $500 love? - Yes - Utopias"
 end
 
 
-rule "... $500 love? - No - Alskan Amber, Ale Asylum , Dogfish Head Craft Brewed Ales, Double Diamond, Cantillon, Stone Brewing Co., Full Sail, Hair Dog, Clipper City Brewing Co."
+rule "... $500 love? - No"
     when
     Answer(question == "... $500 love?" && answer == "No")
     then
@@ -382,7 +382,7 @@ rule "... $500 love? - No - Alskan Amber, Ale Asylum , Dogfish Head Craft Brewed
 end
 
 
-rule "Do you truly love beer? - No - Michelob ultra, Bass"
+rule "Do you truly love beer? - No"
     when
     Answer(question == "Do you truly love beer?" && answer == "No")
     then
